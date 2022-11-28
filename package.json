@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "react-html-table-to-excel": "^2.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    background-image: url("https://media02.stockfood.com/largepreviews/MjE3MTU5MDgyNw==/70051317-Three-men-sitting-around-a-campfire-at-dusk-South-Nahanni-River-Canada.jpg") ;
+    background-size:cover;
+    background-position: 0vh;
+    color:white
+   
+}
+.spantext{
+    font-size: 25px;
+}
+.display{
+  
+}
+.loginbtn{
+    width: 10vw;
+    height: 7vh;
+    font-size: 20px;
+}
