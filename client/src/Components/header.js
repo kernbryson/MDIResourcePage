@@ -49,7 +49,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a class="menu__item" href="#">
+              <a class="menu__item" href="/Profile">
                 Profile
               </a>
             </li>

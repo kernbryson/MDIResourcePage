@@ -5,7 +5,6 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const Signup = () => {
-
   const [formState, setFormState] = useState({
     first: "",
     last: "",
@@ -95,7 +94,7 @@ const Signup = () => {
                     </div>
                     <div className="form-outline mb-2">
                       <input
-                        type="text"
+                        type="number"
                         name="phone"
                         placeholder="7701427610"
                         className="form-control form-control-lg"
@@ -149,4 +148,4 @@ const Signup = () => {
   );
 };
 
-export default Signup
+export default Signup;
