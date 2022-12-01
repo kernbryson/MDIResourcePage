@@ -48,10 +48,9 @@ const Login = (props) => {
           <div className="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11">
             <div className="card shadow-2-strong" >
             {data ? (
-                      <p>
-                        Success! You may now head{' '}
-                        <Link to="/">back to the homepage.</Link>
-                      </p>
+                      <div class="spinner-border" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
                     ) : (
               <form className="card-body p-5 text-center login-form" onSubmit={handleFormSubmit}>
                 <h3 className="mb-5">Sign in</h3>
