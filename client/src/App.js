@@ -8,8 +8,9 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Header from "../src/Components/header"
 import Home from "../src/Components/Home";
+import Signup from"../src/Components/Signup"
 import Login from"../src/Components/Login"
 import "../src/css/App.css";
 // Construct our main GraphQL API endpoint
@@ -41,9 +42,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="">
+          <Header/>
           <div className="">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/Signup" element={<Signup />} />
               <Route path="/Login" element={<Login />} />
             </Routes>
           </div>
