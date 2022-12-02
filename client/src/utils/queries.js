@@ -9,12 +9,35 @@ export const QUERY_USER = gql`
       team
       phone
       email
-
-    
+      skills {
+        _id
+        title
+        description
+      }
+    }
+  }
+`;
+export const QUERY_SKILLS = gql`
+  query getSkills {
+    skills {
+      _id
+      title
+      description
+      skillCreator
     }
   }
 `;
 
+export const QUERY_SINGLE_SKILL = gql`
+  query getSingleSkill($skillId: ID!) {
+    skill(skillId: $skillId) {
+      _id
+      title
+      description
+      skillCreator
+    }
+  }
+`;
 
 export const QUERY_ME = gql`
   query me {
@@ -25,7 +48,12 @@ export const QUERY_ME = gql`
       team
       phone
       email
-     
+      skills {
+        _id
+        title
+        description
+        skillCreator
+      }
     }
   }
 `;

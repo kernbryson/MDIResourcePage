@@ -1,19 +1,26 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Post } = require("../models");
+const { User, Skill } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find()
+      return User.find().populate("skills");
     },
     user: async (parent, { email }) => {
-      return User.findOne({ email })
+      return User.findOne({ email }).populate("skills");
     },
-
+    skills: async (parent, { email }) => {
+      const params = email ? { email } : {};
+      return Skill.find(params).sort({ createdAt: -1 });
+    },
+    skill: async (parent, { skillId }) => {
+      console.log(Skill.findOne({ _id: skillId }));
+      return Skill.findOne({ _id: skillId });
+    },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id })
+        return User.findOne({ _id: context.user._id }).populate("skills");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -41,6 +48,43 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addSkill: async (
+      parent,
+      { title, description },
+      context
+    ) => {
+      if (context.user) {
+        const skill = await Skill.create({
+         title,
+         description,
+         skillCreator: context.user.email,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { skills: skill._id } }
+        );
+
+        return skill;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeSkill: async (parent, { skillId }, context) => {
+      if (context.user) {
+        const skill = await Skill.findOneAndDelete({
+          _id: skillId,
+          skillCreator: context.user.email,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { skills: skill._id } }
+        );
+
+        return skill;
+      }
+      throw new AuthenticationError("You need to be logged in!");
     },
 
   },

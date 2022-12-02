@@ -61,3 +61,19 @@ body{
 .shadow-none {
     box-shadow: none!important;
 }
+.addskill{
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+}
+.inputs{
+    display: block;
+    height: 4vh;
+    width: 14vw;
+    margin: 5px;
+}
+.headerskill{
+    text-align: center;
+}
+.skillbtn{
+    width: 7vw;
+}
