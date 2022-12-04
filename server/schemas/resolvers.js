@@ -12,7 +12,7 @@ const resolvers = {
     },
     skills: async (parent, { email }) => {
       const params = email ? { email } : {};
-      return Skill.find(params).sort({ createdAt: -1 });
+      return Skill.find(params);
     },
     skill: async (parent, { skillId }) => {
       console.log(Skill.findOne({ _id: skillId }));

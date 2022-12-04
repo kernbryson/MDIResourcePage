@@ -1,0 +1,15 @@
+.listbtn{
+   margin: 5px;
+}
+.skills{
+    display: block;
+    height: auto;
+    width: 15vw;
+    margin: 5px;
+ 
+}
+.listheader{
+    display: flex;
+    flex-direction: row;
+    
+}

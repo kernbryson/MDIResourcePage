@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-
+import Auth from "../utils/auth";
 import { ADD_SKILL } from "../utils/mutations";
 import { QUERY_SKILLS, QUERY_ME } from "../utils/queries";
 
@@ -10,9 +10,6 @@ const SkillForm = () => {
     title: "",
     description: "",
   });
-
-  const [characterCount, setCharacterCount] = useState(0);
-
   const [addSkill, { error }] = useMutation(ADD_SKILL, {
     update(cache, { data: { addSkill } }) {
       try {
@@ -63,27 +60,42 @@ const SkillForm = () => {
 
   return (
     <div>
-      <form className="addskill" onSubmit={handleFormSubmit}>
-        <input
-          type="text"
-          placeholder="Title"
-          className="form-control inputs"
-          onChange={handleChange}
-          name="title"
-          value={skillForm.title}
-        />
-        <input
-          type="text"
-          className="form-control inputs"
-          placeholder="Description"
-          onChange={handleChange}
-          name="description"
-          value={skillForm.description}
-        />
-        <button className="btn btn-outline-primary skillbtn" type="submit">
-          Add Skill
-        </button>
-      </form>
+      {Auth.loggedIn() ? (
+        <>
+          <p className={`m-0 ${error ? "text-danger" : ""}`}></p>
+          <form className="addskill" onSubmit={handleFormSubmit}>
+            <input
+              type="text"
+              placeholder="Title"
+              className="form-control inputs"
+              onChange={handleChange}
+              name="title"
+              value={skillForm.title}
+            ></input>
+            <input
+              type="text"
+              className="form-control inputs"
+              placeholder="Description"
+              onChange={handleChange}
+              name="description"
+              value={skillForm.description}
+            ></input>
+            <button className="btn btn-outline-primary skillbtn" type="submit">
+              Add Skill
+            </button>
+            {error && (
+              <div className="col-12 my-3 bg-danger text-white p-3">
+                {error.message}
+              </div>
+            )}
+          </form>
+        </>
+      ) : (
+        <p>
+          You need to be logged in to share your thoughts. Please{" "}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
+      )}
     </div>
   );
 };

@@ -9,10 +9,13 @@
     height: 5px;
 }
 body{
-    margin-top:20px;
+    
     color: #1a202c;
     text-align: left;
     background-color: #e2e8f0;    
+}
+.profilebody{
+    margin-top:20px;
 }
 .main-body {
     padding: 15px;
@@ -68,7 +71,7 @@ body{
 .inputs{
     display: block;
     height: 4vh;
-    width: 14vw;
+    width: 15vw;
     margin: 5px;
 }
 .headerskill{
@@ -76,4 +79,6 @@ body{
 }
 .skillbtn{
     width: 7vw;
+    height: 5vh;
+    margin-bottom: 10px;
 }

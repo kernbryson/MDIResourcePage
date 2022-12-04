@@ -17,9 +17,7 @@ export default function Home() {
       </>
         )}
     </div>
-    <div>
-      About Us
-    </div>
+    
     </div>
   );
 }

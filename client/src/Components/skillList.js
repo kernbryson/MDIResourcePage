@@ -3,13 +3,7 @@ import { REMOVE_SKILL } from "../utils/mutations";
 import { QUERY_SKILLS, QUERY_ME } from "../utils/queries";
 import { useMutation } from "@apollo/client";
 
-
-const SkillList = ({
-  skills,
-  title,
-  showTitle = true,
-  showEmail = true,
-}) => {
+const SkillList = ({ skills, title, showTitle = true, showEmail = true }) => {
   const [skillId, setskillId] = useState("");
   const [removeSkill, { error }] = useMutation(REMOVE_SKILL, {
     update(cache, { data: { addSkill } }) {
@@ -33,7 +27,7 @@ const SkillList = ({
     },
   });
 
-  const handleFormSubmit = async (event, skillId,) => {
+  const handleFormSubmit = async (event, skillId) => {
     event.preventDefault();
 
     try {
@@ -55,36 +49,32 @@ const SkillList = ({
     }
   };
 
-
- 
   return (
     <div>
       <div>
         {skills &&
           skills.map((skill) => (
-
-            <div key={skill._id}>
-
-             <div>
-                {skill.title}
-             </div>
-
-                <form className="d-flex justify-content-center p-2" onSubmit={(event)=>handleFormSubmit(event, skill._id)}>
-                  <button
-                  className="btn btn-primary"
-                    name="skillId"
-                    onChange={handleChange}
-                    value={skill.id}
-                  >Delete Activity</button>
-                </form>
-
+            <div key={skill._id} className="listheader">
+              <div className="skills">{skill.title}</div>
+              <div className="skills">{skill.description}</div>
+              <form
+                className=""
+                onSubmit={(event) => handleFormSubmit(event, skill._id)}
+              >
+                <button
+                  className="btn btn-primary listbtn"
+                  name="skillId"
+                  onChange={handleChange}
+                  value={skill.id}
+                >
+                  Delete Activity
+                </button>
+              </form>
             </div>
           ))}
-        ;
       </div>
     </div>
   );
-          
 };
 
-export default SkillList ;
+export default SkillList;
