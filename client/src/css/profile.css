@@ -67,11 +67,13 @@ body{
 .addskill{
     display: flex; /* 2. display flex to the rescue */
     flex-direction: row;
+  
+    
 }
 .inputs{
     display: block;
     height: 4vh;
-    width: 15vw;
+    width: 17vw;
     margin: 5px;
 }
 .headerskill{
@@ -81,4 +83,5 @@ body{
     width: 7vw;
     height: 5vh;
     margin-bottom: 10px;
+    
 }

@@ -19,6 +19,7 @@ export default function Header() {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
+    window.location = "http://localhost:3000"
   };
   return (
     <div className="hamburger-menu">
@@ -28,7 +29,7 @@ export default function Header() {
       </label>
       {Auth.loggedIn() ? (
         <>
-          <p className="hello"> Hello {user.first}!</p>
+          <p className="hello"> Hello {user.last}!</p>
         </>
       ) : (
         <></>
@@ -42,7 +43,7 @@ export default function Header() {
         {Auth.loggedIn() ? (
           <>
             <li>
-              <a onClick={logout} className="menu__item" href="#">
+              <a onClick={logout} className="menu__item" href="/">
                 Log Out
               </a>
             </li>

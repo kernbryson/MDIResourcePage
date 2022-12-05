@@ -1,10 +1,15 @@
 import React from "react";
 import Auth from "../utils/auth";
+import { useQuery } from "@apollo/client";
+import { QUERY_SKILLS } from "../utils/queries"
+import HomeSkillList from "./Homeskilllist";
 export default function Home() {
+  const { loading, data } = useQuery(QUERY_SKILLS);
+  const skills = data?.skills || [];
   return (
     <div>
     <div className="home ">
-      <h1 className="display-1 display m-2">MDI Resource Page</h1>
+      <h1 className="display-1 display m-2">Dog Soldiers Resource Page</h1>
       <span className="m-2 spantext">Mentor Discover Inspire</span>
       {Auth.loggedIn() ? (
           <></>
@@ -17,7 +22,7 @@ export default function Home() {
       </>
         )}
     </div>
-    
+    <HomeSkillList skills={skills}/>
     </div>
   );
 }

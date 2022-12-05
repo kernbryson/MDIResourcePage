@@ -57,17 +57,14 @@ const SkillList = ({ skills, title, showTitle = true, showEmail = true }) => {
             <div key={skill._id} className="listheader">
               <div className="skills">{skill.title}</div>
               <div className="skills">{skill.description}</div>
-              <form
-                className=""
-                onSubmit={(event) => handleFormSubmit(event, skill._id)}
-              >
+              <form onSubmit={(event) => handleFormSubmit(event, skill._id)}>
                 <button
-                  className="btn btn-primary listbtn"
+                  className="btn btn-danger listbtn"
                   name="skillId"
                   onChange={handleChange}
                   value={skill.id}
                 >
-                  Delete Activity
+                  Delete
                 </button>
               </form>
             </div>

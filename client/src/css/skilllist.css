@@ -1,5 +1,6 @@
 .listbtn{
    margin: 5px;
+   width: 6vw;
 }
 .skills{
     display: block;
@@ -11,5 +12,9 @@
 .listheader{
     display: flex;
     flex-direction: row;
+    border: solid lightgray 1px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
     
 }

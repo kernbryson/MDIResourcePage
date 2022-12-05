@@ -114,16 +114,20 @@ const Signup = () => {
                       />
                       <label className="form-label">Password</label>
                     </div>
+
                     <div className="form-outline mb-4 col-12">
-                      <input
-                        type="text"
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
                         name="team"
-                        placeholder="team name here"
-                        className="form-control form-control-lg"
                         value={formState.team}
                         onChange={handleChange}
-                      />
-                      <label className="form-label">Team</label>
+                      >
+                        <option selected>Select Team</option>
+                        <option value="KickAss">KickAss</option>
+                        <option value="Team Two">Team Two</option>
+                        <option value="Team Three">Team three</option>
+                      </select>
                     </div>
 
                     <button
