@@ -22,6 +22,7 @@ const typeDefs = gql`
     title: String
     description: String
     skillCreator: String
+    skillType: String
   }
 
   type Query {
@@ -38,6 +39,7 @@ const typeDefs = gql`
     addSkill(
       title: String!
       description: String!
+      skillType: String!
     ): Skill
     removeSkill(skillId: ID!): Skill
   }

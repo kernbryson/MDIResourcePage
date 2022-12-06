@@ -12,12 +12,13 @@ export const LOGIN_USER = gql`
   }
 `;
 export const ADD_SKILL = gql`
-  mutation addSkill($title: String!, $description: String!) {
-    addSkill(title: $title, description: $description) {
+  mutation addSkill($title: String!, $description: String!, $skillType: String!) {
+    addSkill(title: $title, description: $description, skillType: $skillType) {
       _id
       title
       description
       skillCreator
+      skillType
     }
   }
 `;

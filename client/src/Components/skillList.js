@@ -57,6 +57,7 @@ const SkillList = ({ skills, title, showTitle = true, showEmail = true }) => {
             <div key={skill._id} className="listheader">
               <div className="skills">{skill.title}</div>
               <div className="skills">{skill.description}</div>
+              <div className="skills">{skill.skillType}</div>
               <form onSubmit={(event) => handleFormSubmit(event, skill._id)}>
                 <button
                   className="btn btn-danger listbtn"

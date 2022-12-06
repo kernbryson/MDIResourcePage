@@ -59,8 +59,7 @@ const Profile = () => {
                     <h4>
                       {user.first} {user.last}
                     </h4>
-
-                    <button className="btn btn-outline-primary">Message</button>
+                    <button className="btn btn-outline-primary" >Message</button>
                   </div>
                 </div>
               </div>

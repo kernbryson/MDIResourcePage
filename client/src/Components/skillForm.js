@@ -9,6 +9,7 @@ const SkillForm = () => {
   const [skillForm, setSkillForm] = useState({
     title: "",
     description: "",
+    skillType: "",
   });
   const [addSkill, { error }] = useMutation(ADD_SKILL, {
     update(cache, { data: { addSkill } }) {
@@ -40,11 +41,13 @@ const SkillForm = () => {
         variables: {
           title: skillForm.title,
           description: skillForm.description,
+          skillType: skillForm.skillType
         },
       });
       setSkillForm({
         title: "",
         description: "",
+        skillType: ""
       });
     } catch (err) {
       console.error(err);
@@ -80,11 +83,22 @@ const SkillForm = () => {
               name="description"
               value={skillForm.description}
             ></input>
+             <select
+                        className="form-select inputs"
+                        aria-label="Default select example"
+                        name="skillType"
+                        value={skillForm.skillType}
+                        onChange={handleChange}
+                      >
+                        <option selected>Select skill type</option>
+                        <option value="Paid">Paid</option>
+                        <option value="Mentor">Mentor</option>
+                      </select>
             <button className="btn btn-outline-primary skillbtn" type="submit">
               Add Skill
             </button>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="col-12 my-3 bg-danger text-white p-3 alert">
                 {error.message}
               </div>
             )}

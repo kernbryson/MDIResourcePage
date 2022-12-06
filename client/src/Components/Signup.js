@@ -125,8 +125,12 @@ const Signup = () => {
                       >
                         <option selected>Select Team</option>
                         <option value="KickAss">KickAss</option>
-                        <option value="Team Two">Team Two</option>
-                        <option value="Team Three">Team three</option>
+                        <option value="FITFO ">FITFO </option>
+                        <option value="Intrepid">Intrepid</option>
+                        <option value="Kore Mataku">Kore Mataku</option>
+                        <option value="King Makers">King Makers</option>
+                        <option value="Ferrum Warriors">Ferrum Warriors</option>
+                        <option value="No Team">No Team</option>
                       </select>
                     </div>
 

@@ -13,6 +13,7 @@ export const QUERY_USER = gql`
         _id
         title
         description
+        skillType
       }
     }
   }
@@ -24,6 +25,7 @@ export const QUERY_SKILLS = gql`
       title
       description
       skillCreator
+      skillType
     }
   }
 `;
@@ -35,6 +37,7 @@ export const QUERY_SINGLE_SKILL = gql`
       title
       description
       skillCreator
+      skillType
     }
   }
 `;
@@ -53,6 +56,7 @@ export const QUERY_ME = gql`
         title
         description
         skillCreator
+        skillType
       }
     }
   }

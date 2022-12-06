@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_SKILLS } from "../utils/queries"
 import HomeSkillList from "./Homeskilllist";
 export default function Home() {
+  
   const { loading, data } = useQuery(QUERY_SKILLS);
   const skills = data?.skills || [];
   return (
@@ -22,7 +23,13 @@ export default function Home() {
       </>
         )}
     </div>
+    {Auth.loggedIn() ? (
+        <>
     <HomeSkillList skills={skills}/>
+    </>
+ ) : (
+  <div></div>
+  )}
     </div>
   );
 }

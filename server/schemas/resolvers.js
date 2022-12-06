@@ -51,7 +51,7 @@ const resolvers = {
     },
     addSkill: async (
       parent,
-      { title, description },
+      { title, description, skillType },
       context
     ) => {
       if (context.user) {
@@ -59,6 +59,7 @@ const resolvers = {
          title,
          description,
          skillCreator: context.user.email,
+         skillType
         });
 
         await User.findOneAndUpdate(

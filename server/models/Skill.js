@@ -18,6 +18,11 @@ const skillSchema = new Schema({
     required: true,
     trim: true,
   },
+  skillType: {
+    type: String,
+    required: true,
+    trim: true,
+  },
 });
 
 const Skill = model("Skill", skillSchema);
