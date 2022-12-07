@@ -41,13 +41,13 @@ const SkillForm = () => {
         variables: {
           title: skillForm.title,
           description: skillForm.description,
-          skillType: skillForm.skillType
+          skillType: skillForm.skillType,
         },
       });
       setSkillForm({
         title: "",
         description: "",
-        skillType: ""
+        skillType: "",
       });
     } catch (err) {
       console.error(err);
@@ -67,14 +67,24 @@ const SkillForm = () => {
         <>
           <p className={`m-0 ${error ? "text-danger" : ""}`}></p>
           <form className="addskill" onSubmit={handleFormSubmit}>
-            <input
-              type="text"
-              placeholder="Title"
-              className="form-control inputs"
-              onChange={handleChange}
+            <select
+              className="form-select inputs"
+              aria-label="Default select example"
               name="title"
               value={skillForm.title}
-            ></input>
+              onChange={handleChange}
+            >
+              <option selected>Select Category</option>
+              <option value="IT">IT</option>
+              <option value="Leadership">Leadership</option>
+              <option value="Artistic">Artistic</option>
+              <option value="Construction">Construction</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Legal">Legal</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Financial">Financial</option>
+              <option value="Instructional">Instructional</option>
+            </select>
             <input
               type="text"
               className="form-control inputs"
@@ -83,17 +93,17 @@ const SkillForm = () => {
               name="description"
               value={skillForm.description}
             ></input>
-             <select
-                        className="form-select inputs"
-                        aria-label="Default select example"
-                        name="skillType"
-                        value={skillForm.skillType}
-                        onChange={handleChange}
-                      >
-                        <option selected>Select skill type</option>
-                        <option value="Paid">Paid</option>
-                        <option value="Mentor">Mentor</option>
-                      </select>
+            <select
+              className="form-select inputs"
+              aria-label="Default select example"
+              name="skillType"
+              value={skillForm.skillType}
+              onChange={handleChange}
+            >
+              <option selected>Select skill type</option>
+              <option value="Paid">Paid</option>
+              <option value="Mentor">Mentor</option>
+            </select>
             <button className="btn btn-outline-primary skillbtn" type="submit">
               Add Skill
             </button>

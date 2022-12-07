@@ -6,7 +6,7 @@ import { QUERY_USER, QUERY_ME, QUERY_SKILLS } from "../utils/queries";
 import SkillList from "./skillList";
 import Auth from "../utils/auth";
 
-const Profile = () => {
+const UserProfile = () => {
   const { email: userParam } = useParams();
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { email: userParam },
@@ -59,7 +59,7 @@ const Profile = () => {
                     <h4>
                       {user.first} {user.last}
                     </h4>
-                    <a href="/Email"><button className="btn btn-outline-primary" >Email</button></a>
+                    <button className="btn btn-outline-primary" >Message</button>
                   </div>
                 </div>
               </div>
@@ -255,4 +255,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default UserProfile;

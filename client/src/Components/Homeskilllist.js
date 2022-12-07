@@ -22,8 +22,8 @@ const HomeSkillList = ({ skills }) => {
         <table className="table table-bordered table-dark table-hover">
           <thead>
             <tr>
-              <th>Man</th>
-              <th>Title</th>
+              <th>Email</th>
+              <th>Category</th>
               <th>Description</th>
               <th>Type</th>
             </tr>
