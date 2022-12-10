@@ -1,11 +1,12 @@
 import React from "react";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
-import { QUERY_SKILLS } from "../utils/queries"
+import { QUERY_USERS } from "../utils/queries"
 import HomeSkillList from "./Homeskilllist";
 export default function Home() {
-  const { loading, data } = useQuery(QUERY_SKILLS);
-  const skills = data?.skills || [];
+  const { loading, data } = useQuery(QUERY_USERS);
+  const users = data?.users || [];
+  
   return (
     <div>
     <div className="home ">
@@ -24,7 +25,7 @@ export default function Home() {
     </div>
     {Auth.loggedIn() ? (
         <>
-    <HomeSkillList skills={skills}/>
+    <HomeSkillList users={users}/>
     </>
  ) : (
   <div></div>

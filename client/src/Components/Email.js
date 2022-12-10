@@ -12,7 +12,7 @@ const Email = () => {
     variables: { email: userParam },
   });
   const user = data?.me || data?.user || {};
-  let userEmail = "https://formsubmit.co/" + user.email;
+  let userEmail = "https://formsubmit.co/" + user.email
   // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.email === userParam) {
     return <Navigate to="/profile" />;
@@ -44,6 +44,8 @@ const Email = () => {
             id="name"
             type="text"
             placeholder="Name"
+            name="name"
+            required
             data-sb-validations="required"
           />
         </div>
@@ -56,6 +58,8 @@ const Email = () => {
             class="form-control"
             id="emailAddress"
             type="email"
+            name="email"
+            required
             placeholder="Email Address"
             data-sb-validations="required, email"
           />
@@ -69,6 +73,7 @@ const Email = () => {
             class="form-control emailstyle"
             id="message"
             type="text"
+            name="message"
             placeholder="Message"
             data-sb-validations="required"
           ></textarea>
