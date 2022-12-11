@@ -7,18 +7,53 @@
 
   },
   {
-    "title": "Soup Kitchen",
-    "description": "Marilyn Ramirez",
-    "skillCreator": "kernbryson@yahoo.com",
-    "skillType": "Paid"
+    "title": "Leadership",
+    "description": "I am willing to mentor a man that needs help with public speaking and leadership",
+    "skillCreator": "amacronald0@auda.org.au",
+    "skillType": "Mentor"
 
   }
   ,
   {
-    "title": "Soup Kitchen",
-    "description": "Marilyn Ramirez",
-    "skillCreator": "kernbryson@yahoo.com",
+    "title": "Artistic",
+    "description": "I am offering my services on teaching any man how to oil paint",
+    "skillCreator": "lbuyers8@slashdot.org",
+    "skillType": "Mentor"
+
+  }  ,
+  {
+    "title": "Construction",
+    "description": "I do garage flooring and decks.",
+    "skillCreator": "jloyda@oracle.com",
     "skillType": "Paid"
+
+  }  ,
+  {
+    "title": "Landscaping",
+    "description": "I offer mowing lawns and bush trimming.",
+    "skillCreator": "araatz6@digg.com",
+    "skillType": "Paid"
+
+  }  ,
+  {
+    "title": "Financial",
+    "description": "I am open to giving any financial planning advice ",
+    "skillCreator": "gciccotto5@1und1.de",
+    "skillType": "Paid"
+
+  }  ,
+  {
+    "title": "Other",
+    "description": "sky diving instructor",
+    "skillCreator": "hhearle1@fema.gov",
+    "skillType": "Mentor"
+
+  }  ,
+  {
+    "title": "Instructional",
+    "description": "I am having a CPR certification class on 12/22",
+    "skillCreator": "sordish2@umn.edu",
+    "skillType": "Mentor"
 
   }
 ]

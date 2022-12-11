@@ -12,7 +12,7 @@ const Email = () => {
     variables: { email: userParam },
   });
   const user = data?.me || data?.user || {};
-  let userEmail = "https://formsubmit.co/" + user.email
+  let userEmail = "https://formsubmit.co/" + user.email;
   // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.email === userParam) {
     return <Navigate to="/profile" />;
@@ -33,7 +33,7 @@ const Email = () => {
 
   return (
     <div class="container py-4">
-        <h2>Email {user.last}</h2>
+      <h2>Email {user.last}</h2>
       <form action={userEmail} method="POST">
         <div class="mb-3">
           <label class="form-label" for="name">
@@ -60,7 +60,7 @@ const Email = () => {
             type="email"
             name="email"
             required
-            placeholder="Email Address"
+            placeholder="Your Email Address"
             data-sb-validations="required, email"
           />
         </div>

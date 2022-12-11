@@ -84,6 +84,7 @@ const SkillForm = () => {
               <option value="Insurance">Insurance</option>
               <option value="Financial">Financial</option>
               <option value="Instructional">Instructional</option>
+              <option value="Other">Other</option>
             </select>
             <input
               type="text"
@@ -101,8 +102,9 @@ const SkillForm = () => {
               onChange={handleChange}
             >
               <option selected>Select skill type</option>
-              <option value="Paid">Paid</option>
+              <option value="ForHire">For Hire</option>
               <option value="Mentor">Mentor</option>
+              <option value="Volunteer">Volunteer</option>
             </select>
             <button className="btn btn-outline-primary skillbtn" type="submit">
               Add Skill
