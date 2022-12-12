@@ -75,6 +75,7 @@ EDIT ON
 
 .hamburger-menu{
     height: 5vh;
+    background-color: white !important;
 }
 .hello{
   float:right;
@@ -92,10 +93,15 @@ EDIT ON
   margin-top: 1vh;
 }
 .image{
-  background-image: url("https://www.mentordiscoverinspire.org/wp-content/uploads/2021/02/logo-mdi.svg") ;
+  background-image: url("https://i.imgur.com/AwXM0Zi.jpg") ;
   width: 6vw;
-  height: 50px;
+  height: 5vh;
   background-size:cover;
   position: absolute;
   left: 4vw;
+  top: px;
+  background-position: 0vh;
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
 }

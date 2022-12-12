@@ -58,6 +58,11 @@ export default function Header() {
                 Profile
               </a>
             </li>
+            <li>
+              <a className="menu__item" href="/FAQ">
+                FAQ
+              </a>
+            </li>
           </>
         ) : (
           <>

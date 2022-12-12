@@ -15,6 +15,7 @@ import Login from "../src/Components/Login";
 import Profile from "./Components/Profile";
 import UserProfile from "./Components/UserProfile";
 import Email from "./Components/Email";
+import FAQ from "./Components/FAQ";
 import "../src/css/App.css";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,6 +55,8 @@ function App() {
               <Route path="Profile" element={<Profile />} />
               <Route path="UserProfile" element={<UserProfile />} />
               <Route path="Email" element={<Email />} />
+              <Route path="FAQ" element={<FAQ />} />
+
             </Routes>
           </div>
         </div>
