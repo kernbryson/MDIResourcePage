@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "../src/Components/header";
 import Home from "../src/Components/Home";
 import Signup from "../src/Components/Signup";
@@ -56,6 +56,7 @@ function App() {
               <Route path="UserProfile" element={<UserProfile />} />
               <Route path="Email" element={<Email />} />
               <Route path="FAQ" element={<FAQ />} />
+
             </Routes>
           </div>
         </div>
