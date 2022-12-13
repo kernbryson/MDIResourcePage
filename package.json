@@ -3,5 +3,11 @@
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.1",
     "react-html-table-to-excel": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server --ignore client",
+    "seed": "node seeders/seed.js",
+    "dev": "nodemon server"
   }
 }
