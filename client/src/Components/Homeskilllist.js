@@ -5,7 +5,7 @@ const HomeSkillList = ({ users }) => {
   const [search, setSearch] = useState("");
   return (
     <div className="bg-dark areacountainer">
-      <h1 className="listhead">Resources</h1>
+      <h1 className="listhead"> Dog Soldiers Resources</h1>
       <div className="form">
         <input
           type="text"
@@ -33,10 +33,14 @@ const HomeSkillList = ({ users }) => {
                 {user.skills
                   .filter((skill) => {
                     return search.toLowerCase() === ""
-                      ? skill
+                      ? skill || user
                       : skill.title.toLowerCase().includes(search) ||
                           skill.description.toLowerCase().includes(search) ||
-                          skill.skillType.toLowerCase().includes(search);
+                          skill.skillType.toLowerCase().includes(search) ||
+                          user.last.toLowerCase().includes(search) ||
+                          user.email.toLowerCase().includes(search) ||
+                          user.phone.toLowerCase().includes(search) ||
+                          user.team.toLowerCase().includes(search);
                   })
                   .map((skill, index) => {
                     return (
