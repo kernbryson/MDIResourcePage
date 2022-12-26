@@ -27,9 +27,10 @@ export default function Header() {
       <label className="menu__btn" htmlFor="menu__toggle">
         <span></span>
       </label>
+      <p className="image"></p>
       {Auth.loggedIn() ? (
         <>
-          <p className="image"></p>
+          
           <p className="hello"> Hello {user.last}!</p>
           <a href="/profile">
             <button className="btn btn-secondary hello profilebtn">
