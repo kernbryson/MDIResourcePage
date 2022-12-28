@@ -55,7 +55,7 @@ const SkillList = ({ skills, title, showTitle = true, showEmail = true }) => {
         {skills &&
           skills.map((skill) => (
             <div key={skill._id} className="listheader">
-              <div className="skills">{skill.title}</div>
+              <div className="skills skttl">{skill.title}</div>
               <div className="skills">{skill.description}</div>
               <div className="skills">{skill.skillType}</div>
               <form onSubmit={(event) => handleFormSubmit(event, skill._id)}>
@@ -66,6 +66,14 @@ const SkillList = ({ skills, title, showTitle = true, showEmail = true }) => {
                   value={skill.id}
                 >
                   Delete
+                </button>
+                <button
+                  className="deletemark "
+                  name="skillId"
+                  onChange={handleChange}
+                  value={skill.id}
+                >
+                  <i className="fa-solid fa-xmark x"></i>
                 </button>
               </form>
             </div>

@@ -1,3 +1,6 @@
+.card{
+    z-index: -1;
+}
 .header{
     font-size: 40px;
     font-weight: bold;
@@ -19,6 +22,7 @@ body{
 }
 .main-body {
     padding: 15px;
+    
 }
 .card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
@@ -84,4 +88,16 @@ body{
     height: 5vh;
     margin-bottom: 10px;
     
+}
+@media only screen and (max-width: 1450px) {
+  .addskill{
+    flex-direction: column;
+  }
+  .inputs{
+    width: 100%;
+  }
+  .skillbtn{
+    width: 100%;
+  }
+ 
 }

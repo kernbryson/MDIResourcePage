@@ -57,6 +57,7 @@ EDIT ON
   background-color: #ECEFF1;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
+  
 }
 .menu__item {
   display: block;
@@ -84,18 +85,18 @@ EDIT ON
 }
 
 .profilebtn{
-  width: 5vw;
-  height: 3vh;
+  width: 100px;
+  height: 30px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1vh;
+  margin-top: 10px;
 }
 .image{
   background-image: url("https://i.imgur.com/AwXM0Zi.jpg") ;
-  width: 6vw;
-  height: 5vh;
+  width: 95px;
+  height: 48px;
   background-size:cover;
   background-position: 0vh;
   display: flex;
@@ -104,5 +105,18 @@ EDIT ON
   border-radius: 2px;
   display: flex;
   position: absolute;
-  left: 4vw ;
+  left: 100px ;
+}
+@media only screen and (max-width: 1290px) {
+  .image {
+   
+ display: block;
+ position: relative;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .profilebtn, .hello {
+   display: none;
+
+  }
 }
