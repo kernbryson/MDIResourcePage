@@ -14,7 +14,7 @@ export default function Home() {
           ) : (
             <>
     <div className="home ">
-      <h1 className="display-1 display m-2">Dog Soldiers Resource Page</h1>
+      <h1 className="display-1 display m-2 title">Dog Soldiers Resource Page</h1>
       <span className="m-2 spantext">Mentor Discover Inspire</span>
 
     <div>
