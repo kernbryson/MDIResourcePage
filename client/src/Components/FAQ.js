@@ -13,21 +13,21 @@ const FAQ = () => {
   </p>
 
   <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4 card faq">
+    <div class="col-md-6 col-lg-4 mb-4 card cardfix faq">
       <h6 class="mb-3 "><i class="far fa-paper-plane  pe-2"></i>How do I navigate the webpage?</h6>
       <p>
         In order to navigate the webpage look for the three lines at the top left of your screen.
       </p>
     </div>
 
-    <div class="col-md-6 col-lg-4 mb-4 card faq">
+    <div class="col-md-6 col-lg-4 mb-4 card cardfix faq">
       <h6 class="mb-3 "><i class="fas fa-pen-alt  pe-2"></i> How do I add a skill?</h6>
       <p>
         In order to add a skill you must go to your profile page and fill out the short form that is listed. Once your skill is submitted It will then show on the resource pag that is located on the home page after you are logged in.
       </p>
     </div>
 
-    <div class="col-md-6 col-lg-4 mb-4 card faq">
+    <div class="col-md-6 col-lg-4 mb-4 card cardfix faq">
       <h6 class="mb-3 "><i class="fas fa-user  pe-2"></i> How do I search for a specific skill im looking for?
       </h6>
       <p>

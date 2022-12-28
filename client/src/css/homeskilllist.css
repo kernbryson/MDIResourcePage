@@ -56,3 +56,9 @@
 .tablestyle{
     height: 80vh;
 }
+@media only screen and (max-width: 900px) {
+  .trhead {
+    width: 5px;
+    
+  }
+}

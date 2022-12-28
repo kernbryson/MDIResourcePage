@@ -46,7 +46,7 @@ const Profile = () => {
 
         <div className="row gutters-sm">
           <div className="col-md-4 mb-3">
-            <div className="card">
+            <div className="card cardfix">
               <div className="card-body">
                 <div className="d-flex flex-column align-items-center text-center">
                   <img
@@ -64,7 +64,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="card mt-3">
+            <div className="card mt-3 cardfix">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
@@ -181,7 +181,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="col-md-8">
-            <div className="card mb-3">
+            <div className="card mb-3 cardfix" >
               <div className="card-body">
                 <div className="row">
                   <div className="col-sm-3">
@@ -230,7 +230,7 @@ const Profile = () => {
 
             <div className="">
               <div className="">
-                <div className="card">
+                <div className="card ">
                   <div className="card-body">
                     <div className="">
                       <div className="mt-3 ">
