@@ -75,15 +75,20 @@ const SkillForm = () => {
               onChange={handleChange}
             >
               <option selected>Select Category</option>
-              <option value="IT">IT</option>
-              <option value="Leadership">Leadership</option>
               <option value="Artistic">Artistic</option>
+              <option value="Communication">Communication</option>
               <option value="Construction">Construction</option>
-              <option value="Landscaping">Landscaping</option>
-              <option value="Legal">Legal</option>
-              <option value="Insurance">Insurance</option>
+              <option value="Events">Events</option>
               <option value="Financial">Financial</option>
+              <option value="Insurance">Insurance</option>
               <option value="Instructional">Instructional</option>
+              <option value="IT">IT</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Leadership">Leadership</option>
+              <option value="Legal">Legal</option>
+              <option value="Production">Production</option>
+              <option value="Training">Training</option>
+              <option value="Transportation">Transportation</option>
               <option value="Other">Other</option>
             </select>
             <input
