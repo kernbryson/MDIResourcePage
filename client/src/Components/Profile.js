@@ -59,7 +59,7 @@ const Profile = () => {
                     <h4>
                       {user.first} {user.last}
                     </h4>
-                    <a href="/Email"><button className="btn btn-outline-primary" >Email</button></a>
+                    {/* <a href="/Email"><button className="btn btn-outline-primary" >Email</button></a> */}
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const Profile = () => {
                 </div>
                 <hr />
                 <div className="row">
-                  <div className="col-sm-12">
+                  {/* <div className="col-sm-12">
                     <a
                       className="btn btn-secondary "
                       target="__blank"
@@ -109,7 +109,7 @@ const Profile = () => {
                     >
                       Edit
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
