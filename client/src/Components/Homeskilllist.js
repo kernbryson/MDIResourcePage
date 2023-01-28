@@ -6,15 +6,16 @@ const HomeSkillList = ({ users }) => {
   return (
     <div className="bg-dark areacountainer">
       <div className="dogback">
-      <h1 className="listhead"> Dog Soldiers Resources</h1>
-      <div className="form">
-        <input
-          type="text"
-          className="form-control form-input"
-          placeholder="Search anything..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
+        <h1 className="listhead"> Dog Soldiers Resources</h1>
+        <div className="form">
+          <input
+            type="text"
+            className="form-control form-input"
+            placeholder="Search anything..."
+            autoCapitalize="off"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
       </div>
       <div>
         <table className="table table-bordered table-dark table-hover tablestyle">
