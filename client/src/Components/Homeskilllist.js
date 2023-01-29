@@ -10,7 +10,7 @@ const HomeSkillList = ({ users }) => {
         <div className="form">
           <input
             type="text"
-            className="form-control form-input"
+            className="form-control form-input lower"
             placeholder="Search anything..."
             autoCapitalize="off"
             onChange={(e) => setSearch(e.target.value)}

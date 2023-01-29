@@ -14,7 +14,9 @@
     place-items: center;
     margin-bottom: 15px;
 }
-
+.lower{
+    text-transform: lowercase;
+}
 
 
 .form span{
